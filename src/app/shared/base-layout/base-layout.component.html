@@ -1,0 +1,20 @@
+<div class="d-flex flex-column min-vh-100">
+    <header class="header">
+        <app-header></app-header>
+    </header>
+
+    <content>
+        <mat-sidenav-container>
+            <mat-sidenav [(opened)]="opened" mode="over">
+                <app-sidebar></app-sidebar>
+            </mat-sidenav>
+            <mat-sidenav-content>
+                <router-outlet></router-outlet>
+            </mat-sidenav-content>
+        </mat-sidenav-container>
+    </content>
+
+    <footer class="mt-auto">
+        <app-footer></app-footer>
+    </footer>
+</div>

@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'ngx-toastr/toastr';
+@import '@angular/material/prebuilt-themes/purple-green.css';
+
+html,
+body {
+    height: 100%;
+    padding: 0%;
+}
+
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    @extend .container !optional;
+    margin: 2% 5%;
+}
+
+.title {
+    font-size: 25px;
+}

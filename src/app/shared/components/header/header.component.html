@@ -1,0 +1,39 @@
+<mat-toolbar color="accent">
+    <mat-toolbar-row>
+      <div class="row w-100 justify-content-between">
+        <div class="col">
+          <a routerLink="/">
+            <img src="assets/images/demo_logo_200x200.svg" width="100px" />
+          </a>
+          <button mat-button (click)="onOpened()" class="menu-button">
+            <mat-icon>menu</mat-icon>
+          </button>
+          <ng-container *ngFor="let menuItem of leftMenuItems">
+            <a mat-flat-button color="accent" [routerLink]="menuItem.link">
+              {{ menuItem.name }}
+            </a>
+          </ng-container>
+        </div>
+        <div class="col-auto d-flex align-items-center">
+          <div *ngIf="!isAuth; else loggedIn">
+            <ng-container *ngFor="let menuItem of rightMenuItems">
+              <a mat-flat-button color="accent" [routerLink]="menuItem.link">
+                {{ menuItem.name }}
+              </a>
+            </ng-container>
+          </div>
+          <ng-template #loggedIn>
+            <div class="d-flex align-items-center">
+              <a routerLink="profile">
+                <img matTooltip="Mi perfil" [src]="profile_img" width="40px" height="40px"
+                  class="profile-img rounded-circle me-2" alt="User Profile" />
+              </a>
+              <a mat-flat-button color="accent" matTooltip="Cerrar sesión" (click)="logout()">
+                <mat-icon>logout</mat-icon>
+              </a>
+            </div>
+          </ng-template>
+        </div>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>

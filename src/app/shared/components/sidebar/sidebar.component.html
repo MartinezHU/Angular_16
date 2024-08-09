@@ -1,0 +1,8 @@
+<mat-list>
+    <ng-container *ngFor="let menuItem of menuItems">
+      <mat-list-item>
+        <a mat-button [routerLink]="menuItem.link">{{ menuItem.name }}</a>
+      </mat-list-item>
+    </ng-container>
+  </mat-list>
+  
