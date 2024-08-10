@@ -16,6 +16,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SharedRouting } from './shared.routing';
 import { LoadingScreenComponent } from './complements/loading-screen/loading-screen.component';
 import { AboutComponent } from './pages/about/about.component';
+import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 
 const SHARED_COMPONENTS = [
   MessagesComponent,
@@ -24,11 +25,13 @@ const SHARED_COMPONENTS = [
   SidebarComponent,
   FooterComponent,
   LoadingScreenComponent,
+  AboutComponent,
+  ContactUsComponent,
 ];
 
 
 @NgModule({
-  declarations: [...SHARED_COMPONENTS, AboutComponent],
+  declarations: [...SHARED_COMPONENTS],
   imports: [
     CommonModule,
     RouterModule,

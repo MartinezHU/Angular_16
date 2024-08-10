@@ -18,6 +18,10 @@ const routes: Routes = [
     loadChildren: () => import('./layout/users/users.module').then((m) => m.UsersModule),
   },
   
+  {
+    path: '', 
+    loadChildren: () => import('./shared/shared.module').then((m) => m.SharedModule),
+  },
 ];
 
 @NgModule({

@@ -6,9 +6,12 @@ import { AngularMaterialModule } from 'src/app/shared/material/angular_material.
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { UsersRoutingModule } from './users.routing';
+import { ProfileDetailsComponent } from './components/profile-details/profile-details.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ProfileDetailsComponent
+  ],
   imports: [
     CommonModule,
     FormsModule,
